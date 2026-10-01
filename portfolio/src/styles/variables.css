@@ -1,0 +1,48 @@
+:root {
+  color-scheme: dark;
+
+  /* Cores */
+  --color-bg: #0b0d12;
+  --color-surface: #12151c;
+  --color-surface-elevated: #181c26;
+  --color-border: #232836;
+  --color-text: #e8eaf0;
+  --color-text-muted: #9aa3b5;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-accent-soft: rgba(59, 130, 246, 0.12);
+
+  /* Fontes */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas,
+    monospace;
+
+  /* Tamanhos de texto */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 1rem + 3vw, 2.5rem);
+  --text-3xl: clamp(2.25rem, 1rem + 5vw, 4rem);
+
+  /* Espaçamentos */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Bordas e animação */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --transition: 200ms ease;
+
+  /* Layout */
+  --container-width: 1100px;
+  --header-height: 4.5rem;
+}
