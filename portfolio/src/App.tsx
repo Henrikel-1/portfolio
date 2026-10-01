@@ -1,10 +1,24 @@
+import Header from "./components/Header/Header";
+import { navLinks } from "./data/navLinks";
+
 function App() {
   return (
-    <main className="container">
-      <h1>Portfólio</h1>
-      <p>Testando o sistema visual: fundo escuro, texto cinza e azul de destaque.</p>
-      <a href="#teste">Link de teste</a>
-    </main>
+    <>
+      <Header />
+      <main>
+        {/* TEMPORÁRIO: seções vazias só pra testar a navegação */}
+        {navLinks.map((link) => (
+          <section
+            key={link.href}
+            id={link.href.slice(1)}
+            className="container"
+            style={{ minHeight: "80vh" }}
+          >
+            <h2>{link.label}</h2>
+          </section>
+        ))}
+      </main>
+    </>
   );
 }
 
