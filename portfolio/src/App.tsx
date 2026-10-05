@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
 import { navLinks } from "./data/navLinks";
 
 function App() {
@@ -8,10 +9,11 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <About />
 
         {/* TEMPORÁRIO: seções vazias só pra testar a navegação */}
         {navLinks
-          .filter((link) => link.href !== "#inicio")
+          .filter((link) => !["#inicio", "#sobre"].includes(link.href))
           .map((link) => (
             <section
               key={link.href}
