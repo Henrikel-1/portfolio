@@ -38,24 +38,6 @@
   color: var(--color-text);
 }
 
-.techList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  padding: 0;
-  list-style: none;
-}
-
-.tech {
-  padding: var(--space-1) var(--space-3);
-  font-family: var(--font-mono);
-  font-size: var(--text-sm);
-  color: var(--color-accent-hover);
-  background-color: var(--color-accent-soft);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  border-radius: 999px;
-}
-
 .intro {
   max-width: 60ch;
   font-size: var(--text-lg);

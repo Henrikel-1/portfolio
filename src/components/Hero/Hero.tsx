@@ -1,5 +1,6 @@
 import { profile } from "../../data/profile";
 import styles from "./Hero.module.css";
+import TagList from "../TagList/TagList";
 
 function Hero() {
   return (
@@ -13,13 +14,7 @@ function Hero() {
 
         <p className={styles.role}>{profile.role}</p>
 
-        <ul className={styles.techList} aria-label="Tecnologias principais">
-          {profile.technologies.map((tech) => (
-            <li key={tech} className={styles.tech}>
-              {tech}
-            </li>
-          ))}
-        </ul>
+        <TagList items={profile.technologies} label="Tecnologias principais" />
 
         <p className={styles.intro}>{profile.intro}</p>
 
