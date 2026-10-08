@@ -15,3 +15,19 @@
   border: 1px solid rgba(59, 130, 246, 0.3);
   border-radius: 999px;
 }
+
+.learning {
+  color: var(--color-text-muted);
+  background-color: transparent;
+  border-style: dashed;
+  border-color: rgba(154, 163, 181, 0.5);
+}
+
+.learningLabel {
+  margin-left: var(--space-2);
+  font-size: 0.85em;
+}
+
+.learningLabel::before {
+  content: "· ";
+}
