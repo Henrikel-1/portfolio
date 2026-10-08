@@ -39,6 +39,7 @@ export const projects: Project[] = [
     description:
       "Sistema desktop para gerenciar os processos seletivos de monitoria do curso de ADS do IFPB. O coordenador lança os editais, os alunos se inscrevem e a classificação é calculada automaticamente pela nota da disciplina e pelo CRE.",
     role: "Analista de Regras de Negócio e QA",
+
     features: [
       "Coordenador: criar, editar, clonar e excluir editais, com vagas, pesos e docentes por disciplina",
       "Ranking automático e relatório de resultados em PDF",
@@ -56,3 +57,17 @@ export const projects: Project[] = [
     github: "https://github.com/Henrikel-1/cadastro-de-monitores-Ifpb",
   },
 ];
+
+export interface Project {
+  title: string;
+  kind: string;
+  description: string;
+  role?: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
+  features: string[];
+  technologies: string[];
+  github: string;
+}
