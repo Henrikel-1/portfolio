@@ -191,12 +191,4 @@ Estudante de Desenvolvimento de Software com foco em:
 * TypeScript
 * Desenvolvimento de APIs REST
 
-### Links
-
-* GitHub: [adicione seu link]
-* LinkedIn: [adicione seu link]
-* Email: [adicione seu email]
-
----
-
 ⭐ Se este projeto foi útil ou interessante para você, considere deixar uma estrela no repositório.
