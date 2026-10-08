@@ -16,7 +16,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  padding: var(--space-6);
+  --item-padding: var(--space-4);
+  padding: var(--item-padding);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -30,7 +31,7 @@
 .item::before {
   content: "";
   position: absolute;
-  top: calc(var(--space-6) + 0.35rem);
+  top: calc(var(--item-padding) + 0.35rem);
   left: calc(-1 * var(--space-8) - 0.4rem);
   width: 0.75rem;
   height: 0.75rem;
@@ -63,6 +64,12 @@
 .note {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
+}
+
+@media (min-width: 480px) {
+  .item {
+    --item-padding: var(--space-6);
+  }
 }
 
 @media (min-width: 768px) {

@@ -39,7 +39,12 @@
 
 .card:hover {
   border-color: var(--color-accent);
-  transform: translateY(-4px);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+  }
 }
 
 .kind {
