@@ -1,7 +1,11 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
+import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
 import { navLinks } from "./data/navLinks";
+
+const builtSections = ["#inicio", "#sobre", "#experiencia", "#projetos"];
 
 function App() {
   return (
@@ -10,10 +14,12 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Experience />
+        <Projects />
 
         {/* TEMPORÁRIO: seções vazias só pra testar a navegação */}
         {navLinks
-          .filter((link) => !["#inicio", "#sobre"].includes(link.href))
+          .filter((link) => !builtSections.includes(link.href))
           .map((link) => (
             <section
               key={link.href}
