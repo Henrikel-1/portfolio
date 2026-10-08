@@ -4,15 +4,7 @@ import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
-import { navLinks } from "./data/navLinks";
-
-const builtSections = [
-  "#inicio",
-  "#sobre",
-  "#experiencia",
-  "#projetos",
-  "#skills",
-];
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -24,20 +16,7 @@ function App() {
         <Experience />
         <Projects />
         <Skills />
-
-        {/* TEMPORÁRIO: seções vazias só pra testar a navegação */}
-        {navLinks
-          .filter((link) => !builtSections.includes(link.href))
-          .map((link) => (
-            <section
-              key={link.href}
-              id={link.href.slice(1)}
-              className="container"
-              style={{ minHeight: "80vh" }}
-            >
-              <h2>{link.label}</h2>
-            </section>
-          ))}
+        <Contact />
       </main>
     </>
   );
