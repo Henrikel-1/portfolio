@@ -3,9 +3,16 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
 import { navLinks } from "./data/navLinks";
 
-const builtSections = ["#inicio", "#sobre", "#experiencia", "#projetos"];
+const builtSections = [
+  "#inicio",
+  "#sobre",
+  "#experiencia",
+  "#projetos",
+  "#skills",
+];
 
 function App() {
   return (
@@ -16,6 +23,7 @@ function App() {
         <About />
         <Experience />
         <Projects />
+        <Skills />
 
         {/* TEMPORÁRIO: seções vazias só pra testar a navegação */}
         {navLinks
