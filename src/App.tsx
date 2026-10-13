@@ -11,8 +11,11 @@ import Reveal from "./components/Reveal/Reveal";
 function App() {
   return (
     <>
+      <a href="#conteudo" className="skip-link">
+        Pular para o conteúdo
+      </a>
       <Header />
-      <main>
+      <main id="conteudo" tabIndex={-1}>
         <Hero />
         <Reveal>
           <About />
