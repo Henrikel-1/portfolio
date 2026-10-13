@@ -1,9 +1,28 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navLinks } from "../../data/navLinks";
+import { useActiveSection } from "../../hooks/useActiveSection";
 import styles from "./Header.module.css";
+
+const sectionIds = navLinks.map((link) => link.href.slice(1));
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const activeId = useActiveSection(sectionIds);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        buttonRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
   return (
     <header className={styles.header}>
@@ -16,6 +35,7 @@ function Header() {
         </a>
 
         <button
+          ref={buttonRef}
           type="button"
           className={styles.menuButton}
           aria-expanded={isOpen}
@@ -52,6 +72,9 @@ function Header() {
                 <a
                   href={link.href}
                   className={styles.link}
+                  aria-current={
+                    activeId === link.href.slice(1) ? "location" : undefined
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

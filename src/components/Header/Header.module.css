@@ -90,6 +90,11 @@
   background-color: var(--color-surface-elevated);
 }
 
+.link[aria-current="location"] {
+  color: var(--color-accent-hover);
+  background-color: var(--color-accent-soft);
+}
+
 @media (min-width: 768px) {
   .menuButton {
     display: none;
