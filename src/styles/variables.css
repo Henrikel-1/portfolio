@@ -13,6 +13,7 @@
   --color-accent-strong: #2563eb;
   --color-accent-strong-hover: #1d4ed8;
   --color-accent-soft: rgba(59, 130, 246, 0.12);
+  --color-danger: #f87171;
 
   /* Fontes */
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;

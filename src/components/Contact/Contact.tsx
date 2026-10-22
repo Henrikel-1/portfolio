@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SectionHeading from "../SectionHeading/SectionHeading";
+import ContactForm from "./ContactForm";
 import { profile } from "../../data/profile";
 import styles from "./Contact.module.css";
 
@@ -58,41 +59,45 @@ function Contact() {
           só me chamar.
         </p>
 
-        <ul className={styles.list}>
-          <li className={styles.item}>
-            <p className={styles.label}>E-mail</p>
-            <a href={`mailto:${profile.email}`} className={styles.value}>
-              {profile.email}
-            </a>
-            <div className={styles.actions}>
-              <button
-                type="button"
-                className="btn btn-secondary"
-                onClick={handleCopy}
-              >
-                Copiar e-mail
-              </button>
-              <p role="status" className={styles.feedback}>
-                {messages[status]}
-              </p>
-            </div>
-          </li>
-
-          {socialLinks.map((link) => (
-            <li key={link.label} className={styles.item}>
-              <p className={styles.label}>{link.label}</p>
-              <a
-                href={link.href}
-                className={styles.value}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${link.label}: ${cleanUrl(link.href)} (abre em nova aba)`}
-              >
-                {cleanUrl(link.href)}
+        <div className={styles.layout}>
+          <ul className={styles.list}>
+            <li className={styles.item}>
+              <p className={styles.label}>E-mail</p>
+              <a href={`mailto:${profile.email}`} className={styles.value}>
+                {profile.email}
               </a>
+              <div className={styles.actions}>
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={handleCopy}
+                >
+                  Copiar e-mail
+                </button>
+                <p role="status" className={styles.feedback}>
+                  {messages[status]}
+                </p>
+              </div>
             </li>
-          ))}
-        </ul>
+
+            {socialLinks.map((link) => (
+              <li key={link.label} className={styles.item}>
+                <p className={styles.label}>{link.label}</p>
+                <a
+                  href={link.href}
+                  className={styles.value}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${link.label}: ${cleanUrl(link.href)} (abre em nova aba)`}
+                >
+                  {cleanUrl(link.href)}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <ContactForm />
+        </div>
       </div>
     </section>
   );
