@@ -1,13 +1,3 @@
-export interface Project {
-  title: string;
-  kind: string;
-  description: string;
-  role?: string;
-  features: string[];
-  technologies: string[];
-  github: string;
-}
-
 export const projects: Project[] = [
   {
     title: "Library API",
