@@ -25,8 +25,8 @@ function Projects() {
                   src={project.image.src}
                   alt={project.image.alt}
                   className={styles.image}
-                  width={1000}
-                  height={1054}
+                  width={1600}
+                  height={1000}
                   loading="lazy"
                 />
               )}
